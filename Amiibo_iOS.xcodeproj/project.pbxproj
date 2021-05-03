@@ -3,16 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		127522082AEF0A2DDA1D96A1 /* Pods_Amiibo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DB074AADB7C55B9AEC81AF /* Pods_Amiibo_iOS.framework */; };
 		2D37984126406F2C003F082E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D37984026406F2C003F082E /* AppDelegate.swift */; };
 		2D37984326406F2C003F082E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D37984226406F2C003F082E /* SceneDelegate.swift */; };
 		2D37984526406F2C003F082E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D37984426406F2C003F082E /* ViewController.swift */; };
 		2D37984826406F2C003F082E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D37984626406F2C003F082E /* Main.storyboard */; };
 		2D37984A26406F2F003F082E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D37984926406F2F003F082E /* Assets.xcassets */; };
 		2D37984D26406F2F003F082E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D37984B26406F2F003F082E /* LaunchScreen.storyboard */; };
+		2D603AC82640736000163FE2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D603AC72640736000163FE2 /* RegisterViewController.swift */; };
+		2D603ACB264073C700163FE2 /* AmiiboRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D603ACA264073C700163FE2 /* AmiiboRouting.swift */; };
+		2D603ACF2640744400163FE2 /* ApiCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D603ACE2640744400163FE2 /* ApiCalls.swift */; };
+		2D603AD7264074F600163FE2 /* AmiiboListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D603AD6264074F600163FE2 /* AmiiboListViewController.swift */; };
+		2D603ADB2640757900163FE2 /* AmiiboCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D603AD92640757900163FE2 /* AmiiboCell.swift */; };
+		2D603ADC2640757900163FE2 /* AmiiboCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D603ADA2640757900163FE2 /* AmiiboCell.xib */; };
+		2DE468CE264078A8002D6C93 /* UserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE468CD264078A8002D6C93 /* UserDataViewController.swift */; };
+		2DE468E226407DC9002D6C93 /* AllAmiibo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE468E126407DC9002D6C93 /* AllAmiibo.swift */; };
+		2DE468F5264091A9002D6C93 /* FavoriteAmiibosListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE468F4264091A9002D6C93 /* FavoriteAmiibosListViewController.swift */; };
+		2DE468F826409435002D6C93 /* LocalFavouriteAmiibos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE468F726409435002D6C93 /* LocalFavouriteAmiibos.swift */; };
+		2DE8F4B2264070F8005C7A76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8F4B1264070F8005C7A76 /* GoogleService-Info.plist */; };
+		2DE8F4BB264071B0005C7A76 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8F4BA264071B0005C7A76 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +37,21 @@
 		2D37984926406F2F003F082E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D37984C26406F2F003F082E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D37984E26406F2F003F082E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D603AC72640736000163FE2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		2D603ACA264073C700163FE2 /* AmiiboRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboRouting.swift; sourceTree = "<group>"; };
+		2D603ACE2640744400163FE2 /* ApiCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCalls.swift; sourceTree = "<group>"; };
+		2D603AD6264074F600163FE2 /* AmiiboListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboListViewController.swift; sourceTree = "<group>"; };
+		2D603AD92640757900163FE2 /* AmiiboCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboCell.swift; sourceTree = "<group>"; };
+		2D603ADA2640757900163FE2 /* AmiiboCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmiiboCell.xib; sourceTree = "<group>"; };
+		2DE468CD264078A8002D6C93 /* UserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewController.swift; sourceTree = "<group>"; };
+		2DE468E126407DC9002D6C93 /* AllAmiibo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAmiibo.swift; sourceTree = "<group>"; };
+		2DE468F4264091A9002D6C93 /* FavoriteAmiibosListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAmiibosListViewController.swift; sourceTree = "<group>"; };
+		2DE468F726409435002D6C93 /* LocalFavouriteAmiibos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFavouriteAmiibos.swift; sourceTree = "<group>"; };
+		2DE8F4B1264070F8005C7A76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2DE8F4BA264071B0005C7A76 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		474BACA03630CC1039BCEFDB /* Pods-Amiibo_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Amiibo_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Amiibo_iOS/Pods-Amiibo_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		67DB074AADB7C55B9AEC81AF /* Pods_Amiibo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Amiibo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C55770C2E429A356A773986F /* Pods-Amiibo_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Amiibo_iOS.release.xcconfig"; path = "Target Support Files/Pods-Amiibo_iOS/Pods-Amiibo_iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +59,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				127522082AEF0A2DDA1D96A1 /* Pods_Amiibo_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A0B72335FA0475B58D5E31B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67DB074AADB7C55B9AEC81AF /* Pods_Amiibo_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2D37983426406F2C003F082E = {
 			isa = PBXGroup;
 			children = (
 				2D37983F26406F2C003F082E /* Amiibo_iOS */,
 				2D37983E26406F2C003F082E /* Products */,
+				8E30A969A6461C928BFB6B45 /* Pods */,
+				2A0B72335FA0475B58D5E31B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +97,106 @@
 			children = (
 				2D37984026406F2C003F082E /* AppDelegate.swift */,
 				2D37984226406F2C003F082E /* SceneDelegate.swift */,
+				2DE468E026407D9A002D6C93 /* Models */,
+				2D603ACD264073CC00163FE2 /* Utils */,
+				2D603AD5264074D300163FE2 /* UserData */,
+				2D603AD4264074C200163FE2 /* Favourites */,
+				2D603AD22640749100163FE2 /* AmiiboDetail */,
+				2D603AD12640747F00163FE2 /* AmiiboList */,
+				2D603AC62640733900163FE2 /* Register */,
+				2DE8F4B9264071A2005C7A76 /* Login */,
 				2D37984426406F2C003F082E /* ViewController.swift */,
 				2D37984626406F2C003F082E /* Main.storyboard */,
 				2D37984926406F2F003F082E /* Assets.xcassets */,
 				2D37984B26406F2F003F082E /* LaunchScreen.storyboard */,
 				2D37984E26406F2F003F082E /* Info.plist */,
+				2DE8F4B1264070F8005C7A76 /* GoogleService-Info.plist */,
 			);
 			path = Amiibo_iOS;
+			sourceTree = "<group>";
+		};
+		2D603AC62640733900163FE2 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				2D603AC72640736000163FE2 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		2D603ACD264073CC00163FE2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2D603ACA264073C700163FE2 /* AmiiboRouting.swift */,
+				2D603ACE2640744400163FE2 /* ApiCalls.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2D603AD12640747F00163FE2 /* AmiiboList */ = {
+			isa = PBXGroup;
+			children = (
+				2D603AD32640749E00163FE2 /* AmiiboCell */,
+				2D603AD6264074F600163FE2 /* AmiiboListViewController.swift */,
+			);
+			path = AmiiboList;
+			sourceTree = "<group>";
+		};
+		2D603AD22640749100163FE2 /* AmiiboDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AmiiboDetail;
+			sourceTree = "<group>";
+		};
+		2D603AD32640749E00163FE2 /* AmiiboCell */ = {
+			isa = PBXGroup;
+			children = (
+				2D603AD92640757900163FE2 /* AmiiboCell.swift */,
+				2D603ADA2640757900163FE2 /* AmiiboCell.xib */,
+			);
+			path = AmiiboCell;
+			sourceTree = "<group>";
+		};
+		2D603AD4264074C200163FE2 /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				2DE468F4264091A9002D6C93 /* FavoriteAmiibosListViewController.swift */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
+		2D603AD5264074D300163FE2 /* UserData */ = {
+			isa = PBXGroup;
+			children = (
+				2DE468CD264078A8002D6C93 /* UserDataViewController.swift */,
+			);
+			path = UserData;
+			sourceTree = "<group>";
+		};
+		2DE468E026407D9A002D6C93 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2DE468E126407DC9002D6C93 /* AllAmiibo.swift */,
+				2DE468F726409435002D6C93 /* LocalFavouriteAmiibos.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2DE8F4B9264071A2005C7A76 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2DE8F4BA264071B0005C7A76 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		8E30A969A6461C928BFB6B45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				474BACA03630CC1039BCEFDB /* Pods-Amiibo_iOS.debug.xcconfig */,
+				C55770C2E429A356A773986F /* Pods-Amiibo_iOS.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +206,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D37985126406F2F003F082E /* Build configuration list for PBXNativeTarget "Amiibo_iOS" */;
 			buildPhases = (
+				C615D2EED08019C7A4065E30 /* [CP] Check Pods Manifest.lock */,
 				2D37983926406F2C003F082E /* Sources */,
 				2D37983A26406F2C003F082E /* Frameworks */,
 				2D37983B26406F2C003F082E /* Resources */,
+				FAE0943A34B58581541E9600 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +259,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D37984D26406F2F003F082E /* LaunchScreen.storyboard in Resources */,
+				2DE8F4B2264070F8005C7A76 /* GoogleService-Info.plist in Resources */,
+				2D603ADC2640757900163FE2 /* AmiiboCell.xib in Resources */,
 				2D37984A26406F2F003F082E /* Assets.xcassets in Resources */,
 				2D37984826406F2C003F082E /* Main.storyboard in Resources */,
 			);
@@ -132,12 +268,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C615D2EED08019C7A4065E30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Amiibo_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAE0943A34B58581541E9600 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Amiibo_iOS/Pods-Amiibo_iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Amiibo_iOS/Pods-Amiibo_iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Amiibo_iOS/Pods-Amiibo_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2D37983926406F2C003F082E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D603ACF2640744400163FE2 /* ApiCalls.swift in Sources */,
+				2DE468E226407DC9002D6C93 /* AllAmiibo.swift in Sources */,
+				2DE8F4BB264071B0005C7A76 /* LoginViewController.swift in Sources */,
+				2D603AC82640736000163FE2 /* RegisterViewController.swift in Sources */,
 				2D37984526406F2C003F082E /* ViewController.swift in Sources */,
+				2D603ACB264073C700163FE2 /* AmiiboRouting.swift in Sources */,
+				2D603AD7264074F600163FE2 /* AmiiboListViewController.swift in Sources */,
+				2D603ADB2640757900163FE2 /* AmiiboCell.swift in Sources */,
+				2DE468F826409435002D6C93 /* LocalFavouriteAmiibos.swift in Sources */,
+				2DE468CE264078A8002D6C93 /* UserDataViewController.swift in Sources */,
+				2DE468F5264091A9002D6C93 /* FavoriteAmiibosListViewController.swift in Sources */,
 				2D37984126406F2C003F082E /* AppDelegate.swift in Sources */,
 				2D37984326406F2C003F082E /* SceneDelegate.swift in Sources */,
 			);
@@ -283,6 +471,7 @@
 		};
 		2D37985226406F2F003F082E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 474BACA03630CC1039BCEFDB /* Pods-Amiibo_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +491,7 @@
 		};
 		2D37985326406F2F003F082E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C55770C2E429A356A773986F /* Pods-Amiibo_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
