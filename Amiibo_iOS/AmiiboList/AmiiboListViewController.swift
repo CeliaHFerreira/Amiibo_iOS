@@ -11,6 +11,7 @@ import Kingfisher
 
 class AmiiboListViewController: UIViewController {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
         var amiiboList: [Amiibo] = []
         let server = ApiCalls()
@@ -19,6 +20,9 @@ class AmiiboListViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        activityIndicator.startAnimating()
+        activityIndicator.color = .systemPink
+        tableView.isHidden = true
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "AmiiboCell", bundle: nil), forCellReuseIdentifier: "AmiiboCell")
@@ -27,7 +31,12 @@ class AmiiboListViewController: UIViewController {
             if let amibosResponse = amiiboListResponse.amiibo{
                 self.amiiboList = amibosResponse
                 DispatchQueue.main.async {
+                    
+                    self.activityIndicator.stopAnimating()
+                    self.activityIndicator.isHidden = true
                     self.tableView.reloadData()
+                    self.tableView.isHidden = false
+
                 }
             }
         } failure: { (_: Error?) in
@@ -44,18 +53,18 @@ extension AmiiboListViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell( withIdentifier: "AmiiboCell", for: indexPath) as! AmiiboCell
-        if let amiibos = amiiboList.first {
+        if amiiboList.first != nil {
             let newName = amiiboList[indexPath.row].name?.replacingOccurrences(of: "\"", with: "", options: .literal, range: nil)
             cell.amiiboName.text = newName
             cell.amiiboType.text = amiiboList[indexPath.row].type
             cell.amiiboGame.text = amiiboList[indexPath.row].gameSeries
+            cell.amiibo = amiiboList[indexPath.row]
             let url = URL(string: amiiboList[indexPath.row].image ?? "")
             cell.amiiboImage.kf.setImage(with: url)
         } else {
-            cell.amiiboName.text = "SuperCosi"
-            cell.amiiboType.text = "Hace ejercicio"
-            cell.amiiboGame.text = "El juego de los gatos"
-            //cell.amiiboImage = UIImageView(image: UIImage(systemName: "leaf.arrow.triangle.circlepath"))
+            cell.amiiboName.text = ""
+            cell.amiiboType.text = ""
+            cell.amiiboGame.text = ""
         }
         return cell
     }

@@ -244,6 +244,10 @@
                                     <outlet property="delegate" destination="Scb-GR-9co" id="O78-RS-ZJW"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="okA-8Y-NXy">
+                                <rect key="frame" x="0.0" y="426" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CBf-hs-78x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -256,6 +260,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Amiibos" id="0Wn-e4-k7n"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="okA-8Y-NXy" id="W28-Xf-nes"/>
                         <outlet property="tableView" destination="d0I-UO-VnN" id="U7Z-vw-POd"/>
                     </connections>
                 </viewController>

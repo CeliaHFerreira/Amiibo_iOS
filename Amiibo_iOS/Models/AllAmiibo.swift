@@ -6,7 +6,7 @@
 //
 import Foundation
 
-class AllAmiibo: Codable {
+public class AllAmiibo: Codable {
     let amiibo: [Amiibo]?
 
     init(amiibo: [Amiibo]?) {
@@ -15,7 +15,7 @@ class AllAmiibo: Codable {
 }
 
 // MARK: - Amiibo
-class Amiibo: Codable {
+public class Amiibo: Codable {
     let amiiboSeries: AmiiboSeries?
     let character, gameSeries, head: String?
     let image: String?
@@ -24,7 +24,7 @@ class Amiibo: Codable {
     let tail: String?
     let type: String?
 
-    init(amiiboSeries: AmiiboSeries?, character: String?, gameSeries: String?, head: String?, image: String?, name: String?, release: Release?, tail: String?, type: String?) {
+    init(amiiboSeries: AmiiboSeries? = nil, character: String? = nil, gameSeries: String? = nil, head: String? = nil, image: String?, name: String?, release: Release? = nil, tail: String? = nil, type: String?) {
         self.amiiboSeries = amiiboSeries
         self.character = character
         self.gameSeries = gameSeries

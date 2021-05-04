@@ -7,65 +7,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5B474E00-FB2B-4C58-843C-5E62A91010F5"
+            uuid = "E5E724BB-EBBF-4B74-95D2-D6797157B2AE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Amiibo_iOS/AmiiboList/AmiiboListViewController.swift"
+            filePath = "Amiibo_iOS/AmiiboList/AmiiboCell/AmiiboCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "awakeFromNib()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5B474E00-FB2B-4C58-843C-5E62A91010F5 - 3b08a0c6240cfb7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Amiibo_iOS.AllAmiibo) -&gt; () in Amiibo_iOS.AmiiboListViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "Amiibo_iOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/celiaherreraferreira/Desktop/Master/Asignaturas/Proyectos/Entregas/IOS/Amiibo_iOS/Amiibo_iOS/Amiibo_iOS/AmiiboList/AmiiboListViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "317">
-               </Location>
-               <Location
-                  uuid = "5B474E00-FB2B-4C58-843C-5E62A91010F5 - c23ef418c6275dc5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 (Amiibo_iOS.AllAmiibo) -&gt; () in Amiibo_iOS.AmiiboListViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "Amiibo_iOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/celiaherreraferreira/Desktop/Master/Asignaturas/Proyectos/Entregas/IOS/Amiibo_iOS/Amiibo_iOS/Amiibo_iOS/AmiiboList/AmiiboListViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "52">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1FDC6F1C-E4B9-4E17-B3CC-5F6E54070EE1"
+            uuid = "DCDDEBD1-51A6-4F68-A0D4-3E369FA94B9A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Amiibo_iOS/AmiiboList/AmiiboListViewController.swift"
+            filePath = "Amiibo_iOS/AmiiboList/AmiiboCell/AmiiboCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "AmiiboListViewController"
-            landmarkType = "3">
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "pressLike(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

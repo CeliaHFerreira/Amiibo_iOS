@@ -25,6 +25,8 @@ class LoginViewController: UIViewController {
 
         //Analytucs Event
         Analytics.logEvent("LoginView", parameters: ["message" : "Iniciada pantalla de Login"])
+       RealmDatabaseRepository.shared().removeAll()
+
     }
    
         

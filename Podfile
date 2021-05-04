@@ -10,5 +10,6 @@ target 'Amiibo_iOS' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Kingfisher'
+  #pod 'RealmSwift'
 
 end

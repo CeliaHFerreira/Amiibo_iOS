@@ -20,6 +20,9 @@
 		2D603AD7264074F600163FE2 /* AmiiboListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D603AD6264074F600163FE2 /* AmiiboListViewController.swift */; };
 		2D603ADB2640757900163FE2 /* AmiiboCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D603AD92640757900163FE2 /* AmiiboCell.swift */; };
 		2D603ADC2640757900163FE2 /* AmiiboCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D603ADA2640757900163FE2 /* AmiiboCell.xib */; };
+		2D8A55152641D24800278844 /* RealmDataBaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8A55142641D24800278844 /* RealmDataBaseRepository.swift */; };
+		2D8A552A2641D2CB00278844 /* DataBaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8A55292641D2CB00278844 /* DataBaseRepository.swift */; };
+		2D8A552E2641D3D100278844 /* AmiiboRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8A552D2641D3D100278844 /* AmiiboRealm.swift */; };
 		2DE468CE264078A8002D6C93 /* UserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE468CD264078A8002D6C93 /* UserDataViewController.swift */; };
 		2DE468E226407DC9002D6C93 /* AllAmiibo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE468E126407DC9002D6C93 /* AllAmiibo.swift */; };
 		2DE468F5264091A9002D6C93 /* FavoriteAmiibosListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE468F4264091A9002D6C93 /* FavoriteAmiibosListViewController.swift */; };
@@ -43,6 +46,9 @@
 		2D603AD6264074F600163FE2 /* AmiiboListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboListViewController.swift; sourceTree = "<group>"; };
 		2D603AD92640757900163FE2 /* AmiiboCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboCell.swift; sourceTree = "<group>"; };
 		2D603ADA2640757900163FE2 /* AmiiboCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmiiboCell.xib; sourceTree = "<group>"; };
+		2D8A55142641D24800278844 /* RealmDataBaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataBaseRepository.swift; sourceTree = "<group>"; };
+		2D8A55292641D2CB00278844 /* DataBaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseRepository.swift; sourceTree = "<group>"; };
+		2D8A552D2641D3D100278844 /* AmiiboRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboRealm.swift; sourceTree = "<group>"; };
 		2DE468CD264078A8002D6C93 /* UserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewController.swift; sourceTree = "<group>"; };
 		2DE468E126407DC9002D6C93 /* AllAmiibo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAmiibo.swift; sourceTree = "<group>"; };
 		2DE468F4264091A9002D6C93 /* FavoriteAmiibosListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAmiibosListViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +111,7 @@
 				2D603AD12640747F00163FE2 /* AmiiboList */,
 				2D603AC62640733900163FE2 /* Register */,
 				2DE8F4B9264071A2005C7A76 /* Login */,
+				2D8A55132641D0A100278844 /* RealmData */,
 				2D37984426406F2C003F082E /* ViewController.swift */,
 				2D37984626406F2C003F082E /* Main.storyboard */,
 				2D37984926406F2F003F082E /* Assets.xcassets */,
@@ -171,6 +178,24 @@
 				2DE468CD264078A8002D6C93 /* UserDataViewController.swift */,
 			);
 			path = UserData;
+			sourceTree = "<group>";
+		};
+		2D8A55132641D0A100278844 /* RealmData */ = {
+			isa = PBXGroup;
+			children = (
+				2D8A552C2641D3A900278844 /* Entity */,
+				2D8A55142641D24800278844 /* RealmDataBaseRepository.swift */,
+				2D8A55292641D2CB00278844 /* DataBaseRepository.swift */,
+			);
+			path = RealmData;
+			sourceTree = "<group>";
+		};
+		2D8A552C2641D3A900278844 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2D8A552D2641D3D100278844 /* AmiiboRealm.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		2DE468E026407D9A002D6C93 /* Models */ = {
@@ -317,16 +342,19 @@
 			files = (
 				2D603ACF2640744400163FE2 /* ApiCalls.swift in Sources */,
 				2DE468E226407DC9002D6C93 /* AllAmiibo.swift in Sources */,
+				2D8A552A2641D2CB00278844 /* DataBaseRepository.swift in Sources */,
 				2DE8F4BB264071B0005C7A76 /* LoginViewController.swift in Sources */,
 				2D603AC82640736000163FE2 /* RegisterViewController.swift in Sources */,
 				2D37984526406F2C003F082E /* ViewController.swift in Sources */,
 				2D603ACB264073C700163FE2 /* AmiiboRouting.swift in Sources */,
+				2D8A55152641D24800278844 /* RealmDataBaseRepository.swift in Sources */,
 				2D603AD7264074F600163FE2 /* AmiiboListViewController.swift in Sources */,
 				2D603ADB2640757900163FE2 /* AmiiboCell.swift in Sources */,
 				2DE468F826409435002D6C93 /* LocalFavouriteAmiibos.swift in Sources */,
 				2DE468CE264078A8002D6C93 /* UserDataViewController.swift in Sources */,
 				2DE468F5264091A9002D6C93 /* FavoriteAmiibosListViewController.swift in Sources */,
 				2D37984126406F2C003F082E /* AppDelegate.swift in Sources */,
+				2D8A552E2641D3D100278844 /* AmiiboRealm.swift in Sources */,
 				2D37984326406F2C003F082E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
