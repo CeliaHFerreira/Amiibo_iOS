@@ -27,4 +27,9 @@ class UserDataViewController: UIViewController {
         router.go2Login(initial: self)
     }
     
+    @IBAction func deleteAmiiboData(_ sender: Any) {
+        RealmDatabaseRepository.shared().removeAll()
+
+    }
+    
 }

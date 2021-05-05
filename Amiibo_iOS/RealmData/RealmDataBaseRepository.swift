@@ -55,7 +55,7 @@ public final class RealmDatabaseRepository: DatabaseRepository {
     
     public func isAmiiboFav(id: String) -> Bool {
         let amiibos = getAmiibos()
-        let isFav = amiibos.filter( { $0.head == id })
+        let isFav = amiibos.filter({ $0.tail == id })
         if isFav.first != nil {
             return true
         } else { return false }
@@ -63,19 +63,13 @@ public final class RealmDatabaseRepository: DatabaseRepository {
     
     public func removeAmiibo(id: String) {
         do {
-            guard let amiibo = getAmiibo(id: id) else { return }
-            
-            let amiiboErased = AmiiboRealm()
-            amiiboErased.name = amiibo.name
-            amiiboErased.type = amiibo.type
-            amiiboErased.gameSeries = amiibo.gameSeries
-            amiiboErased.image = amiibo.image
-            amiiboErased.amiiboId = id
-            
             let realm = try Realm()
-            try! realm.write {
-                realm.delete(amiiboErased);
+            if let favorites = realm.objects(AmiiboRealm.self).filter( { $0.amiiboId == id }).first {
+                try! realm.write {
+                    realm.delete(favorites)
+                }
             }
+            
         } catch {
             print("Error")
             return
@@ -84,7 +78,7 @@ public final class RealmDatabaseRepository: DatabaseRepository {
     
     public func getAmiibo(id:String) -> Amiibo? {
         let amiibos = getAmiibos()
-        guard let amiibo = amiibos.filter( { $0.head == id }).first else { return nil }
+        guard let amiibo = amiibos.filter( { $0.tail == id }).first else { return nil }
         return amiibo
     }
     

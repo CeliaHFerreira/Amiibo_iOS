@@ -306,8 +306,35 @@
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="SettingsViewID" id="F8S-jT-hUd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpK-ct-bRb">
+                                <rect key="frame" x="20" y="683" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="s5h-sx-BcQ"/>
+                                </constraints>
+                                <state key="normal" title="Delete Objects"/>
+                                <connections>
+                                    <action selector="deleteAmiiboData:" destination="bKK-Vp-epf" eventType="touchUpInside" id="iOq-eF-lFY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfA-dK-wOZ">
+                                <rect key="frame" x="20" y="613" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="yhD-Yt-99o"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="9Oo-qY-hw5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Oo-qY-hw5" firstAttribute="trailing" secondItem="jfA-dK-wOZ" secondAttribute="trailing" constant="20" id="4EC-KY-mq4"/>
+                            <constraint firstItem="qpK-ct-bRb" firstAttribute="leading" secondItem="9Oo-qY-hw5" secondAttribute="leading" constant="20" id="8DY-ON-thD"/>
+                            <constraint firstItem="9Oo-qY-hw5" firstAttribute="bottom" secondItem="qpK-ct-bRb" secondAttribute="bottom" constant="80" id="NlJ-na-XgA"/>
+                            <constraint firstItem="jfA-dK-wOZ" firstAttribute="leading" secondItem="9Oo-qY-hw5" secondAttribute="leading" constant="20" id="Qtj-NO-aO3"/>
+                            <constraint firstItem="9Oo-qY-hw5" firstAttribute="trailing" secondItem="qpK-ct-bRb" secondAttribute="trailing" constant="20" id="fbF-zS-IOz"/>
+                            <constraint firstItem="qpK-ct-bRb" firstAttribute="top" secondItem="jfA-dK-wOZ" secondAttribute="bottom" constant="20" id="fcl-xz-jO5"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="65h-li-OJ6">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="BhE-MP-Rzj">
@@ -327,7 +354,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9kI-Fa-D7r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2113.0434782608695" y="1711.6071428571429"/>
+            <point key="canvasLocation" x="2111.594202898551" y="1711.6071428571429"/>
         </scene>
         <!--Item-->
         <scene sceneID="CR2-hH-1rz">

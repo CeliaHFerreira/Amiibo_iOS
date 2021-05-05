@@ -13,8 +13,8 @@ class AmiiboRealm: Object{
     @objc dynamic var name: String? = ""
     @objc dynamic var type: String? = ""
     @objc dynamic var gameSeries: String? = ""
-    @objc dynamic var image: String?
-    @objc dynamic var amiiboId: String?
+    @objc dynamic var image: String? = ""
+    @objc dynamic var amiiboId: String? = ""
     
     static func create(name: String,
                        type:String,
@@ -32,6 +32,6 @@ class AmiiboRealm: Object{
 
 extension AmiiboRealm {
     func parseToDomain() -> Amiibo {
-        Amiibo(gameSeries: self.gameSeries, head: self.amiiboId, image: self.image, name: self.name, type: self.type)
+        Amiibo(gameSeries: self.gameSeries, image: self.image, name: self.name, tail: self.amiiboId, type: self.type)
     }
 }

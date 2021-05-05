@@ -13,9 +13,9 @@ class AmiiboListViewController: UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
-        var amiiboList: [Amiibo] = []
-        let server = ApiCalls()
-
+    var amiiboList: [Amiibo] = []
+    let server = ApiCalls()
+    
     // Returning the xib file after instantiating it
     override func viewDidLoad() {
         
@@ -27,6 +27,10 @@ class AmiiboListViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: "AmiiboCell", bundle: nil), forCellReuseIdentifier: "AmiiboCell")
         
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
         server.retrieveAmiibos { (amiiboListResponse) in
             if let amibosResponse = amiiboListResponse.amiibo{
                 self.amiiboList = amibosResponse
@@ -36,7 +40,7 @@ class AmiiboListViewController: UIViewController {
                     self.activityIndicator.isHidden = true
                     self.tableView.reloadData()
                     self.tableView.isHidden = false
-
+                    
                 }
             }
         } failure: { (_: Error?) in
@@ -59,7 +63,15 @@ extension AmiiboListViewController: UITableViewDelegate, UITableViewDataSource{
             cell.amiiboType.text = amiiboList[indexPath.row].type
             cell.amiiboGame.text = amiiboList[indexPath.row].gameSeries
             cell.amiibo = amiiboList[indexPath.row]
+
             let url = URL(string: amiiboList[indexPath.row].image ?? "")
+            
+            if RealmDatabaseRepository.shared().isAmiiboFav(id: amiiboList[indexPath.row].tail ?? "0") {
+                cell.buttonLike.setImage( UIImage(systemName: "star.fill"), for: .normal)
+            } else {
+                cell.buttonLike.setImage( UIImage(systemName: "star"), for: .normal)
+            }
+            
             cell.amiiboImage.kf.setImage(with: url)
         } else {
             cell.amiiboName.text = ""
@@ -68,7 +80,7 @@ extension AmiiboListViewController: UITableViewDelegate, UITableViewDataSource{
         }
         return cell
     }
-
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 320
         

@@ -20,14 +20,7 @@ class AmiiboCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        if amiibo != nil {
-            self.isLiked = RealmDatabaseRepository.shared().isAmiiboFav(id: amiibo?.head ?? "0")
-        }
-        if isLiked {
-            buttonLike.setImage( UIImage(systemName: "star.fill"), for: .normal)
-        } else {
-            buttonLike.setImage( UIImage(systemName: "star"), for: .normal)
-        }
+
         // Initialization code
     }
     
@@ -38,15 +31,15 @@ class AmiiboCell: UITableViewCell {
     }
     
     @IBAction func pressLike(_ sender: Any) {
-        if isLiked {
+        if !isLiked {
             let amiiboSaved = AmiiboRealm()
             if let amiiboUnw = amiibo {
-                if !RealmDatabaseRepository.shared().isAmiiboFav(id: amiiboUnw.head ?? "0"){
+                if !RealmDatabaseRepository.shared().isAmiiboFav(id: amiiboUnw.tail ?? "0"){
                     amiiboSaved.name = amiiboUnw.name
                     amiiboSaved.type = amiiboUnw.type
                     amiiboSaved.gameSeries = amiiboUnw.gameSeries
                     amiiboSaved.image = amiiboUnw.image
-                    //amiiboSaved.id = amiiboUnw.head
+                    amiiboSaved.amiiboId = amiiboUnw.tail
                     RealmDatabaseRepository.shared().saveAmiibo(amiiboSaved)
                 }
             }
@@ -54,7 +47,7 @@ class AmiiboCell: UITableViewCell {
             
         } else {
             if let amiiboUnw = amiibo {
-                RealmDatabaseRepository.shared().removeAmiibo(id: amiiboUnw.head ?? "0")
+                RealmDatabaseRepository.shared().removeAmiibo(id: amiiboUnw.tail ?? "0")
             }
             buttonLike.setImage( UIImage(systemName: "star"), for: .normal)
         }
