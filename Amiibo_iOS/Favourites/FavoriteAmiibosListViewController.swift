@@ -10,15 +10,15 @@ import Foundation
 import Kingfisher
 
 class FavoriteAmiibosListViewController: UIViewController {
-            
+    
     @IBOutlet weak var tableView: UITableView!
     var amiiboList: [Amiibo] = []
-        let server = ApiCalls()
+    let server = ApiCalls()
     
-
+    
     // Returning the xib file after instantiating it
     override func viewDidLoad() {
-    
+        
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
@@ -30,6 +30,12 @@ class FavoriteAmiibosListViewController: UIViewController {
         DispatchQueue.main.async {
             self.amiiboList = RealmDatabaseRepository.shared().getAmiibos()
             self.tableView.reloadData()
+            
+            if self.amiiboList.isEmpty {
+                self.tableView.isHidden = true
+            } else {
+                self.tableView.isHidden = false
+            }
         }
     }
     
@@ -58,6 +64,7 @@ class FavoriteAmiibosListViewController: UIViewController {
 }
 
 extension FavoriteAmiibosListViewController: UITableViewDelegate, UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return amiiboList.count
     }
@@ -77,10 +84,23 @@ extension FavoriteAmiibosListViewController: UITableViewDelegate, UITableViewDat
         }
         return cell
     }
-//
-//    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-//    }
     
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            
+            RealmDatabaseRepository.shared().removeAmiibo(id: self.amiiboList[indexPath.row].tail ?? "0")
+            self.amiiboList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            if self.amiiboList.isEmpty {
+                self.tableView.isHidden = true
+            } else {
+                self.tableView.isHidden = false
+            }
+            
+        }
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 320
         
