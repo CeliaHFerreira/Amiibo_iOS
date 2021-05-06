@@ -21,8 +21,7 @@ class HostingUserData: UIViewController {
         let name = defaults.string(forKey: "Nombre")
         let firstName = defaults.string(forKey: "Apellido")
         let secondName = defaults.string(forKey: "SegundoApellido")
-
-        let contentView = UIHostingController(rootView: UserDataView(userName: name ?? "", firstName: firstName ?? "", secondName: secondName ?? "", currentPassword: "", newPassword: "", confirmPassword: ""))
+        let contentView = UIHostingController(rootView: UserDataView(userName: name ?? "", firstName: firstName ?? "", secondName: secondName ?? ""))
         
         addChild(contentView)
         view.addSubview(contentView.view)
