@@ -41,7 +41,8 @@ class HostingUserData: UIViewController {
     }
    
     @IBAction func logout(_ sender: Any) {
-        router.go2Login(initial: self)
+        router.go2Login(vc: self)
+        UserDefaults.standard.set(false, forKey: "isLogged")
     }
     
 }

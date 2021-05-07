@@ -12,15 +12,15 @@ import SwiftUI
 class AmiiboRouting {
     
 
-    func go2Login(initial:UIViewController){
-        let vc = initial.storyboard?.instantiateViewController(withIdentifier: "NavigationLogin") as! UINavigationController
+    func go2Login(vc:UIViewController){
+        let vc = vc.storyboard?.instantiateViewController(withIdentifier: "NavigationLogin") as! UINavigationController
         self.switchRootViewController(rootViewController: vc, animated: true, completion: nil)
     }
 
-    func go2TabBar(initial: UIViewController)-> (){
+    func go2TabBar(vc: UIViewController)-> (){
 
 
-            let vc = initial.storyboard?.instantiateViewController(withIdentifier: "TabBarViewController") as! UITabBarController
+            let vc = vc.storyboard?.instantiateViewController(withIdentifier: "TabBarViewController") as! UITabBarController
             vc.selectedViewController = vc.viewControllers?[0]
 
             self.switchRootViewController(rootViewController: vc, animated: true, completion: nil)

@@ -8,6 +8,7 @@
 import UIKit
 import Foundation
 import Kingfisher
+import SkeletonView
 
 class AmiiboListViewController: UIViewController {
     
@@ -25,13 +26,15 @@ class AmiiboListViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        activityIndicator.startAnimating()
-        activityIndicator.color = .systemPink
+        tableView.showAnimatedGradientSkeleton()
+        tableView.isSkeletonable = true
+        tableView.register(UINib(nibName: "AmiiboCell", bundle: nil), forCellReuseIdentifier: "AmiiboCell")
+        self.activityIndicator.isHidden = true
         tableView.isHidden = true
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "AmiiboCell", bundle: nil), forCellReuseIdentifier: "AmiiboCell")
         self.searchBar.delegate = self
+        tableView.reloadData()
     }
     
     
@@ -40,10 +43,13 @@ class AmiiboListViewController: UIViewController {
             if let amibosResponse = amiiboListResponse.amiibo{
                 self.amiiboList = amibosResponse
                 DispatchQueue.main.async {
+                    self.tableView.isSkeletonable = true
                     self.activityIndicator.stopAnimating()
                     self.activityIndicator.isHidden = true
                     self.tableView.reloadData()
+                    self.tableView.showAnimatedGradientSkeleton()
                     self.tableView.isHidden = false
+                    self.tableView.hideSkeleton()
                 }
             }
         } failure: { (_: Error?) in
@@ -97,9 +103,14 @@ extension AmiiboListViewController: UITableViewDelegate, UITableViewDataSource{
             }
             
         } else {
-            cell.amiiboName.text = ""
-            cell.amiiboType.text = ""
-            cell.amiiboGame.text = ""
+            cell.isSkeletonable = true
+            cell.amiiboName.isSkeletonable = true
+            cell.amiiboName.linesCornerRadius = 8
+            cell.amiiboType.isSkeletonable = true
+            cell.amiiboType.linesCornerRadius = 8
+            cell.amiiboGame.isSkeletonable = true
+            cell.amiiboGame.linesCornerRadius = 8
+            cell.amiiboImage.isSkeletonable = true
         }
         return cell
     }

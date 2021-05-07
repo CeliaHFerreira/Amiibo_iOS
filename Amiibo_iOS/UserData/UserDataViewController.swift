@@ -24,7 +24,7 @@ class UserDataViewController: UIViewController {
         UserDefaults.standard.set(false, forKey: "isNotLogged")
         UserDefaults.standard.synchronize()
 
-        router.go2Login(initial: self)
+        router.go2Login(vc: self)
     }
     
     @IBAction func deleteAmiiboData(_ sender: Any) {

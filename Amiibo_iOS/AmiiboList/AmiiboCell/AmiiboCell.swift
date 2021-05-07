@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class AmiiboCell: UITableViewCell {
     
@@ -20,8 +21,8 @@ class AmiiboCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
         // Initialization code
+        setupSkeleton()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -52,6 +53,18 @@ class AmiiboCell: UITableViewCell {
             buttonLike.setImage( UIImage(systemName: "star"), for: .normal)
         }
         isLiked = !isLiked
+    }
+    
+    public func setupSkeleton() {
+        
+        isSkeletonable = true
+        amiiboName.isSkeletonable = true
+        amiiboName.linesCornerRadius = 8
+        amiiboType.isSkeletonable = true
+        amiiboType.linesCornerRadius = 8
+        amiiboGame.isSkeletonable = true
+        amiiboGame.linesCornerRadius = 8
+        amiiboImage.isSkeletonable = true
     }
     
 }

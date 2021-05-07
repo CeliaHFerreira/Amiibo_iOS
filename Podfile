@@ -6,11 +6,12 @@ target 'Amiibo_iOS' do
   use_frameworks!
 
   # Pods for Amiibo_iOS
-  pod 'Alamofire'
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Kingfisher'
-#  pod 'RealmSwift'
+ # pod 'RealmSwift'
   pod 'GoogleSignIn'
   pod 'FacebookLogin'
+  pod 'SkeletonView'
+
 end
