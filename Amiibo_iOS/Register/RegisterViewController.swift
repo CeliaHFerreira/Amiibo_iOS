@@ -16,7 +16,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     
-    //let enrolmentRouter = EnrolmentRouter()
+    let enrolmentRouter = AmiiboRouting()
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ class RegisterViewController: UIViewController {
                 if let result = result, error == nil {
                     UserDefaults.standard.set(true, forKey: "isNotLogged")
                     UserDefaults.standard.synchronize()
-                    //self.enrolmentRouter.go2TabBar(initial: self)
+                    self.enrolmentRouter.go2TabBar(initial: self)
                     
                     //Llamamos al router para mandarnos a la pantalla de listado
                     print("hola")

@@ -29,6 +29,16 @@ class LoginViewController: UIViewController {
 
     }
    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
         
     
     @IBAction func loginButton(_ sender: Any) {
@@ -55,9 +65,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func RegisterButton(_ sender: Any) {
-        //server.retrievePlantList()
-        self.router.go2TabBar(initial: self)
-        //self.router.go2Register(initial: self)
+        Analytics.logEvent("GORegister", parameters: ["message" : "Iniciada pantalla de Registro"])
     }
     
 
