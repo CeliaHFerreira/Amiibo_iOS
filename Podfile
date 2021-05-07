@@ -11,5 +11,6 @@ target 'Amiibo_iOS' do
   pod 'Firebase/Auth'
   pod 'Kingfisher'
 #  pod 'RealmSwift'
-
+  pod 'GoogleSignIn'
+  pod 'FacebookLogin'
 end

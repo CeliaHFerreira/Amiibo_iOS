@@ -66,19 +66,24 @@
                                             <constraint firstAttribute="height" constant="62" id="kD8-cG-VF2"/>
                                             <constraint firstAttribute="width" constant="62" id="sJl-h4-ajf"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="btn_google_light_normal_ios"/>
+                                        <state key="normal" backgroundImage="btn_google_dark_normal_ios"/>
+                                        <connections>
+                                            <action selector="loginGoogle:" destination="FWu-YU-aWe" eventType="touchUpInside" id="h5P-fE-rNt"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUw-KO-OvD" userLabel="Apple">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUw-KO-OvD" userLabel="Facebook">
                                         <rect key="frame" x="301" y="597" width="56" height="56"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="M8G-zF-INk"/>
                                             <constraint firstAttribute="width" constant="56" id="fNq-vg-vfZ"/>
                                         </constraints>
                                         <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                                         <state key="normal">
-                                            <imageReference key="image" image="applelogo" catalog="system" symbolScale="large" renderingMode="template"/>
+                                            <imageReference key="image" image="f_logo_RGB-Blue_512" symbolScale="large" renderingMode="template"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginFacebook:" destination="FWu-YU-aWe" eventType="touchUpInside" id="f2s-Mt-1rk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -275,6 +280,7 @@
                     <tabBarItem key="tabBarItem" title="Amiibos" id="0Wn-e4-k7n"/>
                     <connections>
                         <outlet property="activityIndicator" destination="okA-8Y-NXy" id="W28-Xf-nes"/>
+                        <outlet property="searchBar" destination="vJI-cJ-Cwa" id="uYY-AC-tvw"/>
                         <outlet property="tableView" destination="d0I-UO-VnN" id="U7Z-vw-POd"/>
                     </connections>
                 </viewController>
@@ -571,8 +577,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="applelogo" catalog="system" width="103" height="128"/>
-        <image name="btn_google_light_normal_ios" width="48" height="48"/>
+        <image name="btn_google_dark_normal_ios" width="48" height="48"/>
+        <image name="f_logo_RGB-Blue_512" width="1076" height="1076"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -50,6 +50,7 @@
 		2D603ADA2640757900163FE2 /* AmiiboCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmiiboCell.xib; sourceTree = "<group>"; };
 		2D6EE12926433CAA00B6D292 /* UserDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataView.swift; sourceTree = "<group>"; };
 		2D6EE12C264348D000B6D292 /* HostingUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingUserData.swift; sourceTree = "<group>"; };
+		2D6EE1E92645CC2300B6D292 /* Amiibo_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Amiibo_iOS.entitlements; sourceTree = "<group>"; };
 		2D8A55142641D24800278844 /* RealmDataBaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataBaseRepository.swift; sourceTree = "<group>"; };
 		2D8A55292641D2CB00278844 /* DataBaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseRepository.swift; sourceTree = "<group>"; };
 		2D8A552D2641D3D100278844 /* AmiiboRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboRealm.swift; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 		2D37983F26406F2C003F082E /* Amiibo_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				2D6EE1E92645CC2300B6D292 /* Amiibo_iOS.entitlements */,
 				2D37984026406F2C003F082E /* AppDelegate.swift */,
 				2D37984226406F2C003F082E /* SceneDelegate.swift */,
 				2DE468E026407D9A002D6C93 /* Models */,
@@ -242,6 +244,7 @@
 				2D37983A26406F2C003F082E /* Frameworks */,
 				2D37983B26406F2C003F082E /* Resources */,
 				FAE0943A34B58581541E9600 /* [CP] Embed Pods Frameworks */,
+				F2CD09B41FEC89763D33B0DA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -320,6 +323,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2CD09B41FEC89763D33B0DA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Amiibo_iOS/Pods-Amiibo_iOS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Amiibo_iOS/Pods-Amiibo_iOS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Amiibo_iOS/Pods-Amiibo_iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FAE0943A34B58581541E9600 /* [CP] Embed Pods Frameworks */ = {
@@ -511,6 +531,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Amiibo_iOS/Amiibo_iOS.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L3M67X7T56;
 				INFOPLIST_FILE = Amiibo_iOS/Info.plist;
@@ -520,6 +542,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "es.upsa.mimo.Amiibo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -531,6 +554,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Amiibo_iOS/Amiibo_iOS.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L3M67X7T56;
 				INFOPLIST_FILE = Amiibo_iOS/Info.plist;
@@ -540,6 +565,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "es.upsa.mimo.Amiibo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
