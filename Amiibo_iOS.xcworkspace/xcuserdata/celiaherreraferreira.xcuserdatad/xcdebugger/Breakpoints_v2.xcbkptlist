@@ -52,5 +52,101 @@
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B67BDDD8-D1CA-463F-8A11-524AA9D922E1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Amiibo_iOS/Utils/FilterAmiibos.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "findAmiibo(tail:success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B67BDDD8-D1CA-463F-8A11-524AA9D922E1 - b2b66e996b797609"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Amiibo_iOS.FilterAmiibos.findAmiibo(tail: Swift.String, success: (Amiibo_iOS.Amiibo) -&gt; (), failure: (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Amiibo_iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/celiaherreraferreira/Desktop/Master/Asignaturas/Proyectos/Entregas/IOS/Amiibo_iOS/Amiibo_iOS/Amiibo_iOS/Utils/FilterAmiibos.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "B67BDDD8-D1CA-463F-8A11-524AA9D922E1 - 147ab629feac0e31"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Amiibo_iOS.AllAmiibo) -&gt; () in Amiibo_iOS.FilterAmiibos.findAmiibo(tail: Swift.String, success: (Amiibo_iOS.Amiibo) -&gt; (), failure: (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Amiibo_iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/celiaherreraferreira/Desktop/Master/Asignaturas/Proyectos/Entregas/IOS/Amiibo_iOS/Amiibo_iOS/Amiibo_iOS/Utils/FilterAmiibos.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "173">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CFCE32FA-8025-47E8-9167-4F94B4959A7B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Amiibo_iOS/Favourites/FavoriteAmiibosListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3324651C-185D-4FC0-ABA7-C0CEC27758FC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Amiibo_iOS/Utils/FilterAmiibos.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "findAmiibo(tail:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0167D63D-9B7D-4848-B983-0CC158DF14EA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Amiibo_iOS/AmiiboList/AmiiboListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -13,8 +13,9 @@ import SkeletonView
 class AmiiboListViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
+    
+    let router = AmiiboRouting()
     
     var amiiboList: [Amiibo] = []
     let server = ApiCalls()
@@ -24,32 +25,28 @@ class AmiiboListViewController: UIViewController {
     
     // Returning the xib file after instantiating it
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        tableView.showAnimatedGradientSkeleton()
-        tableView.isSkeletonable = true
+        self.navigationController?.isNavigationBarHidden = true
         tableView.register(UINib(nibName: "AmiiboCell", bundle: nil), forCellReuseIdentifier: "AmiiboCell")
-        self.activityIndicator.isHidden = true
         tableView.isHidden = true
         tableView.delegate = self
         tableView.dataSource = self
         self.searchBar.delegate = self
-        tableView.reloadData()
     }
-    
     
     override func viewDidAppear(_ animated: Bool) {
         server.retrieveAmiibos { (amiiboListResponse) in
             if let amibosResponse = amiiboListResponse.amiibo{
-                self.amiiboList = amibosResponse
                 DispatchQueue.main.async {
                     self.tableView.isSkeletonable = true
-                    self.activityIndicator.stopAnimating()
-                    self.activityIndicator.isHidden = true
                     self.tableView.reloadData()
                     self.tableView.showAnimatedGradientSkeleton()
                     self.tableView.isHidden = false
-                    self.tableView.hideSkeleton()
+                   // DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        self.amiiboList = amibosResponse
+                        self.tableView.reloadData()
+                        self.tableView.hideSkeleton()
+                    //}
                 }
             }
         } failure: { (_: Error?) in
@@ -60,11 +57,16 @@ class AmiiboListViewController: UIViewController {
 }
 
 extension AmiiboListViewController: UITableViewDelegate, UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if searching {
-            return searchedAmiibo.count
+        if amiiboList.first != nil {
+            if searching {
+                return searchedAmiibo.count
+            } else {
+                return amiiboList.count
+            }
         } else {
-            return amiiboList.count
+            return 10
         }
     }
     
@@ -111,13 +113,21 @@ extension AmiiboListViewController: UITableViewDelegate, UITableViewDataSource{
             cell.amiiboGame.isSkeletonable = true
             cell.amiiboGame.linesCornerRadius = 8
             cell.amiiboImage.isSkeletonable = true
+            cell.showSkeleton()
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 320
-        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if !searching {
+            router.go2DetailView(vc: self, amiibo: amiiboList[indexPath.row])
+        } else {
+            router.go2DetailView(vc: self, amiibo: searchedAmiibo[indexPath.row])
+        }
     }
 }
 

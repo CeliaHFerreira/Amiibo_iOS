@@ -15,6 +15,8 @@ class FavoriteAmiibosListViewController: UIViewController {
     var amiiboList: [Amiibo] = []
     let server = ApiCalls()
     
+    let router = AmiiboRouting()
+    let filterClass = FilterAmiibos()
     
     // Returning the xib file after instantiating it
     override func viewDidLoad() {
@@ -28,9 +30,9 @@ class FavoriteAmiibosListViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         DispatchQueue.main.async {
+            self.navigationController?.isNavigationBarHidden = true
             self.amiiboList = RealmDatabaseRepository.shared().getAmiibos()
             self.tableView.reloadData()
-            
             if self.amiiboList.isEmpty {
                 self.tableView.isHidden = true
             } else {
@@ -38,29 +40,6 @@ class FavoriteAmiibosListViewController: UIViewController {
             }
         }
     }
-    
-    //    func retrievePlantsList() {
-    //        guard let url = URL(string: "https:\\") else { return } //Falta meter url plantas
-    //        URLSession.shared.dataTask(with: url) { (data, response, error) in
-    //
-    //            guard let json = data else { return }
-    //            //Serializamos los datos
-    //            do {
-    //                let decoder = JSONDecoder()
-    //                //self.dataArray = try decoder.decode([Plant].self, from: json)
-    //            } catch let error {
-    //                print("Ha ocurrido un error: \(error.localizedDescription)")
-    //            }
-    //        }.resume()
-    //    }
-    //
-    //
-    //    func navDetail(plantID: Int){
-    //        let vc = DetailPlantViewController()
-    //        let nc = UINavigationController(rootViewController: vc)
-    //        present(nc, animated: true, completion: nil)
-    //    }
-    
 }
 
 extension FavoriteAmiibosListViewController: UITableViewDelegate, UITableViewDataSource{
@@ -71,12 +50,13 @@ extension FavoriteAmiibosListViewController: UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell( withIdentifier: "AmiiboCell", for: indexPath) as! AmiiboCell
-        if let amiibos = amiiboList.first {
+        if amiiboList.first != nil{
             cell.amiiboName.text = amiiboList[indexPath.row].name
             cell.amiiboType.text = amiiboList[indexPath.row].type
             cell.amiiboGame.text = amiiboList[indexPath.row].gameSeries
             let url = URL(string: amiiboList[indexPath.row].image ?? "")
             cell.amiiboImage.kf.setImage(with: url)
+            cell.buttonLike.isEnabled = false
         } else {
             cell.amiiboName.text = ""
             cell.amiiboType.text = ""
@@ -101,9 +81,19 @@ extension FavoriteAmiibosListViewController: UITableViewDelegate, UITableViewDat
             
         }
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 320
-        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.filterClass.findAmiibo( tail: amiiboList[indexPath.row].tail ?? "0", success: { (amiibo) in
+            DispatchQueue.main.async {
+                self.router.go2DetailView(vc: self, amiibo: amiibo)
+            }
+        },failure: { (_: Error?) in
+            print("Ha ocurrido un error")
+        })
     }
 }
 

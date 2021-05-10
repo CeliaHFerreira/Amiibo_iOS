@@ -13,5 +13,6 @@ target 'Amiibo_iOS' do
   pod 'GoogleSignIn'
   pod 'FacebookLogin'
   pod 'SkeletonView'
+  pod 'TransitionButton'
 
 end

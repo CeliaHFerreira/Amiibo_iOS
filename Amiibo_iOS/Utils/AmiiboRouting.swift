@@ -19,12 +19,16 @@ class AmiiboRouting {
 
     func go2TabBar(vc: UIViewController)-> (){
 
-
             let vc = vc.storyboard?.instantiateViewController(withIdentifier: "TabBarViewController") as! UITabBarController
             vc.selectedViewController = vc.viewControllers?[0]
-
             self.switchRootViewController(rootViewController: vc, animated: true, completion: nil)
-
+    }
+    
+    func go2DetailView(vc: UIViewController, amiibo: Amiibo) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "AmiiboDetail", bundle: nil)
+        let detailView = storyBoard.instantiateViewController(withIdentifier: "AmiiboDetail") as! AmiiboDetailViewController
+        detailView.amiibo = amiibo
+        vc.navigationController?.pushViewController(detailView, animated: true)
     }
 
     func switchRootViewController(rootViewController: UIViewController, animated: Bool, completion: (() -> Void)?) {

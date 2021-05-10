@@ -8,6 +8,7 @@
 import Foundation
 import FacebookLogin
 import FirebaseAuth
+import TransitionButton
 
 class ApiCalls {
     
@@ -27,12 +28,17 @@ class ApiCalls {
         }.resume()
     }
     
-    func loginCredentials(vc: UIViewController, email: String, password: String) {
+    func loginCredentials(vc: UIViewController, email: String, password: String, button: TransitionButton) {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if result != nil , error == nil {
                 UserDefaults.standard.set(true, forKey: "isLogged")
                 UserDefaults.standard.synchronize()
-                self.router.go2TabBar(vc: vc)
+                button.cornerRadius = 6
+                button.tintColor = .white
+                button.backgroundColor = .systemBlue
+                button.stopAnimation(animationStyle: .expand, completion: {
+                    self.router.go2TabBar(vc: vc)
+                })
             } else {
                 let alertController = UIAlertController(title: "Error", message: "Se ha producido un error", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))

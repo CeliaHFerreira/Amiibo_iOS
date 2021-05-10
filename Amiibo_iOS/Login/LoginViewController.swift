@@ -10,11 +10,13 @@ import FirebaseAnalytics
 import FirebaseAuth
 import GoogleSignIn
 import FacebookLogin
+import TransitionButton
 
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
+    @IBOutlet weak var loginButton: TransitionButton!
     
     let router = AmiiboRouting()
     let server = ApiCalls()
@@ -43,7 +45,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButton(_ sender: Any) {
         if let email = emailText.text, let password = passwordText.text {
-            server.loginCredentials(vc: self, email: email, password: password)
+            server.loginCredentials(vc: self, email: email, password: password, button: loginButton)
         }
     }
     

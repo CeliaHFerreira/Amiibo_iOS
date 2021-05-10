@@ -121,6 +121,7 @@ PODS:
   - nanopb/encode (2.30908.0)
   - PromisesObjC (1.2.12)
   - SkeletonView (1.15.0)
+  - TransitionButton (0.5.3)
 
 DEPENDENCIES:
   - FacebookLogin
@@ -129,6 +130,7 @@ DEPENDENCIES:
   - GoogleSignIn
   - Kingfisher
   - SkeletonView
+  - TransitionButton
 
 SPEC REPOS:
   trunk:
@@ -153,6 +155,7 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - SkeletonView
+    - TransitionButton
 
 SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
@@ -176,7 +179,8 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SkeletonView: cac18a3ac4f893b09d99e65072d806ef08377aae
+  TransitionButton: 36283346e17c64775a1b3bc3a7a72940a367de1f
 
-PODFILE CHECKSUM: 1d05391d57b6f2aca92d37f6b4c9726db6b46083
+PODFILE CHECKSUM: ac40a8ac00966d81b77487d334c05082772bfec4
 
 COCOAPODS: 1.10.1
