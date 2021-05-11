@@ -11,6 +11,7 @@ import Kingfisher
 
 class FavoriteAmiibosListViewController: UIViewController {
     
+    @IBOutlet weak var emptyList: UILabel!
     @IBOutlet weak var tableView: UITableView!
     var amiiboList: [Amiibo] = []
     let server = ApiCalls()
@@ -29,14 +30,18 @@ class FavoriteAmiibosListViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        self.emptyList.text = "¡Añade tus Amiibos favoritos!"
+        self.emptyList.textColor = UIColor(named: "Pink")
         DispatchQueue.main.async {
             self.navigationController?.isNavigationBarHidden = true
             self.amiiboList = RealmDatabaseRepository.shared().getAmiibos()
             self.tableView.reloadData()
             if self.amiiboList.isEmpty {
                 self.tableView.isHidden = true
+                self.emptyList.isHidden = false
             } else {
                 self.tableView.isHidden = false
+                self.emptyList.isHidden = true
             }
         }
     }
@@ -75,8 +80,10 @@ extension FavoriteAmiibosListViewController: UITableViewDelegate, UITableViewDat
             
             if self.amiiboList.isEmpty {
                 self.tableView.isHidden = true
+                self.emptyList.isHidden = false
             } else {
                 self.tableView.isHidden = false
+                self.emptyList.isHidden = true
             }
             
         }

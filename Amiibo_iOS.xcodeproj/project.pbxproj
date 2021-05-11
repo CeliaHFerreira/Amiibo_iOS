@@ -23,6 +23,24 @@
 		2D603ADC2640757900163FE2 /* AmiiboCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D603ADA2640757900163FE2 /* AmiiboCell.xib */; };
 		2D6EE12A26433CAA00B6D292 /* UserDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6EE12926433CAA00B6D292 /* UserDataView.swift */; };
 		2D6EE12D264348D000B6D292 /* HostingUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6EE12C264348D000B6D292 /* HostingUserData.swift */; };
+		2D84021A264B0BF6007A98BE /* Raleway-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D840208264B0BEA007A98BE /* Raleway-ThinItalic.ttf */; };
+		2D84021B264B0BF6007A98BE /* Raleway-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D840209264B0BEB007A98BE /* Raleway-SemiBoldItalic.ttf */; };
+		2D84021C264B0BF6007A98BE /* Raleway-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D84020A264B0BEC007A98BE /* Raleway-BlackItalic.ttf */; };
+		2D84021D264B0BF6007A98BE /* Raleway-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D84020B264B0BED007A98BE /* Raleway-Italic.ttf */; };
+		2D84021E264B0BF6007A98BE /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D84020C264B0BED007A98BE /* Raleway-SemiBold.ttf */; };
+		2D84021F264B0BF6007A98BE /* Raleway-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D84020D264B0BEE007A98BE /* Raleway-ExtraBoldItalic.ttf */; };
+		2D840220264B0BF6007A98BE /* Raleway-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D84020E264B0BEF007A98BE /* Raleway-LightItalic.ttf */; };
+		2D840221264B0BF6007A98BE /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D84020F264B0BEF007A98BE /* Raleway-ExtraLight.ttf */; };
+		2D840222264B0BF6007A98BE /* Raleway-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D840210264B0BF0007A98BE /* Raleway-BoldItalic.ttf */; };
+		2D840223264B0BF6007A98BE /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D840211264B0BF1007A98BE /* Raleway-Bold.ttf */; };
+		2D840224264B0BF6007A98BE /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D840212264B0BF1007A98BE /* Raleway-Light.ttf */; };
+		2D840225264B0BF6007A98BE /* Raleway-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D840213264B0BF2007A98BE /* Raleway-ExtraLightItalic.ttf */; };
+		2D840226264B0BF6007A98BE /* Raleway-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D840214264B0BF3007A98BE /* Raleway-MediumItalic.ttf */; };
+		2D840227264B0BF6007A98BE /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D840215264B0BF3007A98BE /* Raleway-ExtraBold.ttf */; };
+		2D840228264B0BF6007A98BE /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D840216264B0BF4007A98BE /* Raleway-Black.ttf */; };
+		2D840229264B0BF6007A98BE /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D840217264B0BF5007A98BE /* Raleway-Regular.ttf */; };
+		2D84022A264B0BF6007A98BE /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D840218264B0BF5007A98BE /* Raleway-Thin.ttf */; };
+		2D84022B264B0BF6007A98BE /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D840219264B0BF6007A98BE /* Raleway-Medium.ttf */; };
 		2D8A55152641D24800278844 /* RealmDataBaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8A55142641D24800278844 /* RealmDataBaseRepository.swift */; };
 		2D8A552A2641D2CB00278844 /* DataBaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8A55292641D2CB00278844 /* DataBaseRepository.swift */; };
 		2D8A552E2641D3D100278844 /* AmiiboRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8A552D2641D3D100278844 /* AmiiboRealm.swift */; };
@@ -54,6 +72,24 @@
 		2D6EE12926433CAA00B6D292 /* UserDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataView.swift; sourceTree = "<group>"; };
 		2D6EE12C264348D000B6D292 /* HostingUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingUserData.swift; sourceTree = "<group>"; };
 		2D6EE1E92645CC2300B6D292 /* Amiibo_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Amiibo_iOS.entitlements; sourceTree = "<group>"; };
+		2D840208264B0BEA007A98BE /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
+		2D840209264B0BEB007A98BE /* Raleway-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		2D84020A264B0BEC007A98BE /* Raleway-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-BlackItalic.ttf"; sourceTree = "<group>"; };
+		2D84020B264B0BED007A98BE /* Raleway-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Italic.ttf"; sourceTree = "<group>"; };
+		2D84020C264B0BED007A98BE /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		2D84020D264B0BEE007A98BE /* Raleway-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		2D84020E264B0BEF007A98BE /* Raleway-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-LightItalic.ttf"; sourceTree = "<group>"; };
+		2D84020F264B0BEF007A98BE /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
+		2D840210264B0BF0007A98BE /* Raleway-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-BoldItalic.ttf"; sourceTree = "<group>"; };
+		2D840211264B0BF1007A98BE /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		2D840212264B0BF1007A98BE /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
+		2D840213264B0BF2007A98BE /* Raleway-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		2D840214264B0BF3007A98BE /* Raleway-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-MediumItalic.ttf"; sourceTree = "<group>"; };
+		2D840215264B0BF3007A98BE /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
+		2D840216264B0BF4007A98BE /* Raleway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Black.ttf"; sourceTree = "<group>"; };
+		2D840217264B0BF5007A98BE /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		2D840218264B0BF5007A98BE /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
+		2D840219264B0BF6007A98BE /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Medium.ttf"; sourceTree = "<group>"; };
 		2D8A55142641D24800278844 /* RealmDataBaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataBaseRepository.swift; sourceTree = "<group>"; };
 		2D8A55292641D2CB00278844 /* DataBaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseRepository.swift; sourceTree = "<group>"; };
 		2D8A552D2641D3D100278844 /* AmiiboRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboRealm.swift; sourceTree = "<group>"; };
@@ -121,6 +157,7 @@
 				2D603AD12640747F00163FE2 /* AmiiboList */,
 				2D603AC62640733900163FE2 /* Register */,
 				2DE8F4B9264071A2005C7A76 /* Login */,
+				2D840207264B0BC6007A98BE /* Fonts */,
 				2D8A55132641D0A100278844 /* RealmData */,
 				2D37984426406F2C003F082E /* ViewController.swift */,
 				2D37984626406F2C003F082E /* Main.storyboard */,
@@ -193,6 +230,31 @@
 				2D6EE12C264348D000B6D292 /* HostingUserData.swift */,
 			);
 			path = UserData;
+			sourceTree = "<group>";
+		};
+		2D840207264B0BC6007A98BE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2D840216264B0BF4007A98BE /* Raleway-Black.ttf */,
+				2D84020A264B0BEC007A98BE /* Raleway-BlackItalic.ttf */,
+				2D840211264B0BF1007A98BE /* Raleway-Bold.ttf */,
+				2D840210264B0BF0007A98BE /* Raleway-BoldItalic.ttf */,
+				2D840215264B0BF3007A98BE /* Raleway-ExtraBold.ttf */,
+				2D84020D264B0BEE007A98BE /* Raleway-ExtraBoldItalic.ttf */,
+				2D84020F264B0BEF007A98BE /* Raleway-ExtraLight.ttf */,
+				2D840213264B0BF2007A98BE /* Raleway-ExtraLightItalic.ttf */,
+				2D84020B264B0BED007A98BE /* Raleway-Italic.ttf */,
+				2D840212264B0BF1007A98BE /* Raleway-Light.ttf */,
+				2D84020E264B0BEF007A98BE /* Raleway-LightItalic.ttf */,
+				2D840219264B0BF6007A98BE /* Raleway-Medium.ttf */,
+				2D840214264B0BF3007A98BE /* Raleway-MediumItalic.ttf */,
+				2D840217264B0BF5007A98BE /* Raleway-Regular.ttf */,
+				2D84020C264B0BED007A98BE /* Raleway-SemiBold.ttf */,
+				2D840209264B0BEB007A98BE /* Raleway-SemiBoldItalic.ttf */,
+				2D840218264B0BF5007A98BE /* Raleway-Thin.ttf */,
+				2D840208264B0BEA007A98BE /* Raleway-ThinItalic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		2D8A55132641D0A100278844 /* RealmData */ = {
@@ -299,11 +361,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D37984D26406F2F003F082E /* LaunchScreen.storyboard in Resources */,
+				2D84022B264B0BF6007A98BE /* Raleway-Medium.ttf in Resources */,
 				2DE8F4B2264070F8005C7A76 /* GoogleService-Info.plist in Resources */,
+				2D84021C264B0BF6007A98BE /* Raleway-BlackItalic.ttf in Resources */,
+				2D84022A264B0BF6007A98BE /* Raleway-Thin.ttf in Resources */,
 				2DE1A5BA2649B80300A3ED2F /* AmiiboDetail.storyboard in Resources */,
 				2D603ADC2640757900163FE2 /* AmiiboCell.xib in Resources */,
+				2D84021A264B0BF6007A98BE /* Raleway-ThinItalic.ttf in Resources */,
+				2D84021D264B0BF6007A98BE /* Raleway-Italic.ttf in Resources */,
+				2D84021B264B0BF6007A98BE /* Raleway-SemiBoldItalic.ttf in Resources */,
+				2D84021F264B0BF6007A98BE /* Raleway-ExtraBoldItalic.ttf in Resources */,
+				2D840229264B0BF6007A98BE /* Raleway-Regular.ttf in Resources */,
 				2D37984A26406F2F003F082E /* Assets.xcassets in Resources */,
+				2D840220264B0BF6007A98BE /* Raleway-LightItalic.ttf in Resources */,
 				2D37984826406F2C003F082E /* Main.storyboard in Resources */,
+				2D840225264B0BF6007A98BE /* Raleway-ExtraLightItalic.ttf in Resources */,
+				2D840222264B0BF6007A98BE /* Raleway-BoldItalic.ttf in Resources */,
+				2D840224264B0BF6007A98BE /* Raleway-Light.ttf in Resources */,
+				2D840226264B0BF6007A98BE /* Raleway-MediumItalic.ttf in Resources */,
+				2D840227264B0BF6007A98BE /* Raleway-ExtraBold.ttf in Resources */,
+				2D840221264B0BF6007A98BE /* Raleway-ExtraLight.ttf in Resources */,
+				2D84021E264B0BF6007A98BE /* Raleway-SemiBold.ttf in Resources */,
+				2D840223264B0BF6007A98BE /* Raleway-Bold.ttf in Resources */,
+				2D840228264B0BF6007A98BE /* Raleway-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,17 +620,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Amiibo_iOS/Amiibo_iOS.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L3M67X7T56;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = A5UCFNWB8C;
 				INFOPLIST_FILE = Amiibo_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = es.upsa.mimo.AmiiboList;
+				PRODUCT_BUNDLE_IDENTIFIER = es.upsa.mimo.listAmibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = listAmiibo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -563,17 +643,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Amiibo_iOS/Amiibo_iOS.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L3M67X7T56;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = A5UCFNWB8C;
 				INFOPLIST_FILE = Amiibo_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = es.upsa.mimo.AmiiboList;
+				PRODUCT_BUNDLE_IDENTIFIER = es.upsa.mimo.listAmibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = listAmiibo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

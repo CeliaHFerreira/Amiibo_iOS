@@ -27,6 +27,8 @@ class AmiiboListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Volver")
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "DarkerGreen")
         tableView.register(UINib(nibName: "AmiiboCell", bundle: nil), forCellReuseIdentifier: "AmiiboCell")
         tableView.isHidden = true
         tableView.delegate = self
@@ -35,6 +37,7 @@ class AmiiboListViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
         server.retrieveAmiibos { (amiiboListResponse) in
             if let amibosResponse = amiiboListResponse.amiibo{
                 DispatchQueue.main.async {
@@ -42,10 +45,10 @@ class AmiiboListViewController: UIViewController {
                     self.tableView.reloadData()
                     self.tableView.showAnimatedGradientSkeleton()
                     self.tableView.isHidden = false
-                   // DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                        self.amiiboList = amibosResponse
-                        self.tableView.reloadData()
-                        self.tableView.hideSkeleton()
+                    // DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self.amiiboList = amibosResponse
+                    self.tableView.reloadData()
+                    self.tableView.hideSkeleton()
                     //}
                 }
             }
@@ -101,7 +104,6 @@ extension AmiiboListViewController: UITableViewDelegate, UITableViewDataSource{
                 } else {
                     cell.buttonLike.setImage( UIImage(systemName: "star"), for: .normal)
                 }
-                cell.amiiboImage.kf.setImage(with: url)
             }
             
         } else {
@@ -133,7 +135,7 @@ extension AmiiboListViewController: UITableViewDelegate, UITableViewDataSource{
 
 extension AmiiboListViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchedAmiibo = amiiboList.filter { $0.name!.lowercased().prefix(searchText.count) == searchText.lowercased() }
+        searchedAmiibo = amiiboList.filter { $0.name!.lowercased().prefix(searchText.count) == searchText.lowercased() || $0.gameSeries!.lowercased().prefix(searchText.count) == searchText.lowercased() }
         searching = true
         tableView.reloadData()
     }

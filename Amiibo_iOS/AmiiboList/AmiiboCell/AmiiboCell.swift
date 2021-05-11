@@ -23,6 +23,7 @@ class AmiiboCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         setupSkeleton()
+        buttonLike.tintColor = UIColor(named: "Yellow")
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

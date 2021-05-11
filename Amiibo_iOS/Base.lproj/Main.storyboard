@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -233,7 +234,8 @@
                     <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="75r-0b-5w2">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="DarkerGreen"/>
+                        <color key="selectedImageTintColor" name="DarkerGreen"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="skeletonCornerRadius">
                                 <real key="value" value="0.0"/>
@@ -306,18 +308,31 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUr-Es-sDp">
+                                <rect key="frame" x="20" y="348" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="HF6-6j-b4A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MUG-8a-Twf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="qUr-Es-sDp" firstAttribute="centerY" secondItem="5j3-bO-UCb" secondAttribute="centerY" id="8M7-a5-lUA"/>
+                            <constraint firstItem="qUr-Es-sDp" firstAttribute="centerX" secondItem="5j3-bO-UCb" secondAttribute="centerX" id="8N0-co-w6w"/>
                             <constraint firstItem="O0k-oY-RK7" firstAttribute="top" secondItem="5j3-bO-UCb" secondAttribute="top" id="EC7-Wz-IFz"/>
                             <constraint firstItem="O0k-oY-RK7" firstAttribute="leading" secondItem="5j3-bO-UCb" secondAttribute="leading" id="GFY-Q3-9Jc"/>
                             <constraint firstItem="MUG-8a-Twf" firstAttribute="bottom" secondItem="O0k-oY-RK7" secondAttribute="bottom" id="Izv-cL-M7i"/>
+                            <constraint firstItem="MUG-8a-Twf" firstAttribute="trailing" secondItem="qUr-Es-sDp" secondAttribute="trailing" constant="20" id="ZNo-gu-P3z"/>
                             <constraint firstItem="MUG-8a-Twf" firstAttribute="trailing" secondItem="O0k-oY-RK7" secondAttribute="trailing" id="nuB-40-lco"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MM0-gp-Cyp"/>
                     <connections>
+                        <outlet property="emptyList" destination="qUr-Es-sDp" id="KlS-AC-BSm"/>
                         <outlet property="tableView" destination="O0k-oY-RK7" id="toY-UB-dQO"/>
                     </connections>
                 </viewController>
@@ -342,7 +357,9 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Hwu-9U-hvW"/>
                                             <constraint firstAttribute="height" constant="50" id="rRr-dN-zT7"/>
                                         </constraints>
-                                        <state key="normal" title="Guardar datos personales"/>
+                                        <state key="normal" title="Guardar datos personales">
+                                            <color key="titleColor" name="Blue"/>
+                                        </state>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RqL-Yd-B2G">
                                         <rect key="frame" x="118" y="26" width="276" height="34"/>
@@ -354,6 +371,7 @@
                                     </textField>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="R5d-Su-0Ld">
                                         <rect key="frame" x="10" y="41.000000000000007" width="96" height="94.666666666666671"/>
+                                        <color key="tintColor" name="LighterGreen"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="96" id="0ts-DS-uUh"/>
                                             <constraint firstAttribute="width" constant="96" id="9E7-Ng-82I"/>
@@ -401,7 +419,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="s5h-sx-BcQ"/>
                                 </constraints>
-                                <state key="normal" title="Delete Objects"/>
+                                <state key="normal" title="Delete Objects">
+                                    <color key="titleColor" name="Red"/>
+                                </state>
                                 <connections>
                                     <action selector="deleteAmiiboData:" destination="bKK-Vp-epf" eventType="touchUpInside" id="iOq-eF-lFY"/>
                                 </connections>
@@ -415,7 +435,9 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="HWY-YZ-1Eh"/>
                                             <constraint firstAttribute="height" constant="50" id="yhD-Yt-99o"/>
                                         </constraints>
-                                        <state key="normal" title="Cambiar contraseña"/>
+                                        <state key="normal" title="Cambiar contraseña">
+                                            <color key="titleColor" name="Pink"/>
+                                        </state>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kbe-gS-h9K">
                                         <rect key="frame" x="20" y="152" width="374" height="34"/>
@@ -547,7 +569,9 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Ci9-dD-z0Z" userLabel="Salir">
                                 <rect key="frame" x="302" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Salir"/>
+                                <state key="normal" title="Salir">
+                                    <color key="titleColor" name="Red"/>
+                                </state>
                                 <connections>
                                     <action selector="logout:" destination="oee-p8-bQP" eventType="touchUpInside" id="DjJ-WK-Cpo"/>
                                 </connections>
@@ -798,11 +822,6 @@
             <point key="canvasLocation" x="1202.8985507246377" y="2446.467391304348"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="82v-Z4-2jc">
-            <size key="intrinsicContentSize" width="42" height="30"/>
-        </designable>
-    </designables>
     <resources>
         <image name="btn_google_dark_normal_ios" width="48" height="48"/>
         <image name="f_logo_RGB-Blue_512" width="1076" height="1076"/>
@@ -810,6 +829,21 @@
         <image name="person.2.square.stack" catalog="system" width="113" height="128"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="star" catalog="system" width="128" height="116"/>
+        <namedColor name="Blue">
+            <color red="0.076197020709999994" green="0.66338300699999997" blue="0.92944616079999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="DarkerGreen">
+            <color red="0.012374211099999999" green="0.52792495490000002" blue="0.3803744912" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="LighterGreen">
+            <color red="0.60176473860000002" green="0.7797878385" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Pink">
+            <color red="0.91136640310000006" green="0.0" blue="0.50197726490000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Red">
+            <color red="0.9887157083" green="0.0044789607640000001" blue="0.082220278679999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
