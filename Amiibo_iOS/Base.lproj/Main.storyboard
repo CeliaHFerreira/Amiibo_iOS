@@ -9,6 +9,14 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-Medium.ttf">
+            <string>Raleway-Medium</string>
+        </array>
+        <array key="Raleway-Regular.ttf">
+            <string>Raleway-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="2en-MT-tJc">
@@ -29,7 +37,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="36" id="L7n-Rv-R83"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lVv-xv-PYb">
@@ -37,7 +45,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="36" id="7wP-a4-7lp"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
@@ -47,15 +55,21 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82v-Z4-2jc" customClass="TransitionButton" customModule="TransitionButton">
-                                        <rect key="frame" x="56" y="290" width="42" height="30"/>
-                                        <state key="normal" title="Entrar"/>
+                                        <rect key="frame" x="54" y="290" width="46" height="32"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="17"/>
+                                        <state key="normal" title="Entrar">
+                                            <color key="titleColor" name="Blue"/>
+                                        </state>
                                         <connections>
                                             <action selector="loginButton:" destination="FWu-YU-aWe" eventType="touchUpInside" id="W5L-1h-vwi"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxn-A7-qbH">
-                                        <rect key="frame" x="290" y="290" width="78" height="30"/>
-                                        <state key="normal" title="Registrarse"/>
+                                        <rect key="frame" x="281" y="290" width="87" height="32"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="17"/>
+                                        <state key="normal" title="Registrarse">
+                                            <color key="titleColor" name="DarkerGreen"/>
+                                        </state>
                                         <connections>
                                             <action selector="RegisterButton:" destination="FWu-YU-aWe" eventType="touchUpInside" id="nvT-VJ-3N8"/>
                                             <segue destination="dRz-7w-AC5" kind="show" id="7fJ-E8-iJk"/>
@@ -73,7 +87,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUw-KO-OvD" userLabel="Facebook">
-                                        <rect key="frame" x="301" y="597" width="56" height="56"/>
+                                        <rect key="frame" x="296.66666666666669" y="597" width="56" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="M8G-zF-INk"/>
                                             <constraint firstAttribute="width" constant="56" id="fNq-vg-vfZ"/>
@@ -91,7 +105,7 @@
                                 <constraints>
                                     <constraint firstItem="knC-mc-fCu" firstAttribute="leading" secondItem="bOC-b0-2Mr" secondAttribute="leading" constant="46" id="B2P-Kr-jW6"/>
                                     <constraint firstItem="knC-mc-fCu" firstAttribute="centerY" secondItem="zUw-KO-OvD" secondAttribute="centerY" id="DVy-Qf-IQA"/>
-                                    <constraint firstItem="82v-Z4-2jc" firstAttribute="leading" secondItem="bOC-b0-2Mr" secondAttribute="leading" constant="56" id="GRE-yO-1TU"/>
+                                    <constraint firstItem="82v-Z4-2jc" firstAttribute="leading" relation="lessThanOrEqual" secondItem="bOC-b0-2Mr" secondAttribute="leading" constant="56" id="GRE-yO-1TU"/>
                                     <constraint firstAttribute="trailing" secondItem="gxn-A7-qbH" secondAttribute="trailing" constant="46" id="NFX-aE-Y9Q"/>
                                     <constraint firstItem="82v-Z4-2jc" firstAttribute="top" secondItem="fMD-wh-qtq" secondAttribute="bottom" constant="40" id="TY4-IY-hMy"/>
                                     <constraint firstItem="knC-mc-fCu" firstAttribute="centerX" secondItem="82v-Z4-2jc" secondAttribute="centerX" id="bWP-Yp-swI"/>
@@ -128,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jVQ-sE-UXS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1525" y="134"/>
+            <point key="canvasLocation" x="1524.6376811594205" y="133.69565217391306"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="eOe-7b-g2r">
@@ -172,6 +186,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="5Hm-qY-9dC"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="20"/>
                                         <state key="normal" title="Registrarse"/>
                                         <connections>
                                             <action selector="registerButton:" destination="dRz-7w-AC5" eventType="touchUpInside" id="iNz-sv-GLX"/>
@@ -313,7 +328,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="HF6-6j-b4A"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -567,8 +582,9 @@
                     <navigationItem key="navigationItem" id="PRn-zU-fWp">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="A8o-qq-FP6">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Ci9-dD-z0Z" userLabel="Salir">
-                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <rect key="frame" x="302" y="4" width="92" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="20"/>
                                 <state key="normal" title="Salir">
                                     <color key="titleColor" name="Red"/>
                                 </state>
@@ -822,6 +838,11 @@
             <point key="canvasLocation" x="1202.8985507246377" y="2446.467391304348"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="82v-Z4-2jc">
+            <size key="intrinsicContentSize" width="46" height="32"/>
+        </designable>
+    </designables>
     <resources>
         <image name="btn_google_dark_normal_ios" width="48" height="48"/>
         <image name="f_logo_RGB-Blue_512" width="1076" height="1076"/>
@@ -830,19 +851,19 @@
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <namedColor name="Blue">
-            <color red="0.076197020709999994" green="0.66338300699999997" blue="0.92944616079999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.075999997556209564" green="0.66299998760223389" blue="0.92900002002716064" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="DarkerGreen">
-            <color red="0.012374211099999999" green="0.52792495490000002" blue="0.3803744912" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.012000000104308128" green="0.52799999713897705" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="LighterGreen">
-            <color red="0.60176473860000002" green="0.7797878385" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.60199999809265137" green="0.77999997138977051" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Pink">
-            <color red="0.91136640310000006" green="0.0" blue="0.50197726490000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.91100001335144043" green="0.0" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Red">
-            <color red="0.9887157083" green="0.0044789607640000001" blue="0.082220278679999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.98900002241134644" green="0.0040000001899898052" blue="0.082000002264976501" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

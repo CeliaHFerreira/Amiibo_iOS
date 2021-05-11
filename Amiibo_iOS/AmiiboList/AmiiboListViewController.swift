@@ -104,6 +104,7 @@ extension AmiiboListViewController: UITableViewDelegate, UITableViewDataSource{
                 } else {
                     cell.buttonLike.setImage( UIImage(systemName: "star"), for: .normal)
                 }
+                cell.amiiboImage.kf.setImage(with: url)
             }
             
         } else {

@@ -18,10 +18,10 @@ struct UserDataView: View {
     
     var body: some View {
         Form {
-            Section(header: Text("Datos de usuario").foregroundColor(Color(UIColor(named: "DarkerGreen")!))) {
-                TextField("Nombre", text: $userName)
-                TextField("Apellido", text: $firstName)
-                TextField("SegundoApellido", text: $secondName)
+            Section(header: Text("Datos de usuario").font(Font.custom("Raleway", size: 15)).foregroundColor(Color(UIColor(named: "DarkerGreen")!))) {
+                TextField("Nombre", text: $userName).font(Font.custom("Raleway", size: 17))
+                TextField("Apellido", text: $firstName).font(Font.custom("Raleway", size: 17))
+                TextField("SegundoApellido", text: $secondName).font(Font.custom("Raleway", size: 17))
                 
                 Button(action: {
                     
@@ -31,15 +31,15 @@ struct UserDataView: View {
                     defaults.set(secondName, forKey: "SegundoApellido")
                     
                 }) {
-                    Text("Guardar tus datos").foregroundColor(Color(UIColor(named: "Blue")!))
+                    Text("Guardar tus datos").font(Font.custom("Raleway", size: 17)).foregroundColor(Color(UIColor(named: "Blue")!))
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
                 }
             }
-            Section(header: Text("Borrar Amiibos favoritos").foregroundColor(Color(UIColor(named: "DarkerGreen")!))) {
+            Section(header: Text("Borrar Amiibos favoritos").font(Font.custom("Raleway", size: 15)).foregroundColor(Color(UIColor(named: "DarkerGreen")!))) {
                 Button(action: {
                     RealmDatabaseRepository.shared().removeAll()
                 }) {
-                    Text("Resetear favoritos").foregroundColor(Color(UIColor(named: "Pink")!))
+                    Text("Resetear favoritos").font(Font.custom("Raleway", size: 17)).foregroundColor(Color(UIColor(named: "Pink")!))
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
                 }
             }

@@ -24,6 +24,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Volver")
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "DarkerGreen")
         Analytics.logEvent("LoginView", parameters: ["message" : "Iniciada pantalla de Login"])
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.delegate = self
