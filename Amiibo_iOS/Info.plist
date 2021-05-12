@@ -4,8 +4,6 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>UIUserInterfaceStyle</key>
-	<string>Light</string>
 	<key>CFBundleDisplayName</key>
 	<string>listAmiibo</string>
 	<key>CFBundleExecutable</key>
@@ -19,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -69,6 +67,27 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Raleway-Black.ttf</string>
+		<string>Raleway-BlackItalic.ttf</string>
+		<string>Raleway-Bold.ttf</string>
+		<string>Raleway-BoldItalic.ttf</string>
+		<string>Raleway-ExtraBold.ttf</string>
+		<string>Raleway-ExtraBoldItalic.ttf</string>
+		<string>Raleway-ExtraLight.ttf</string>
+		<string>Raleway-ExtraLightItalic.ttf</string>
+		<string>Raleway-Italic.ttf</string>
+		<string>Raleway-LightItalic.ttf</string>
+		<string>Raleway-Light.ttf</string>
+		<string>Raleway-Medium.ttf</string>
+		<string>Raleway-MediumItalic.ttf</string>
+		<string>Raleway-Regular.ttf</string>
+		<string>Raleway-SemiBold.ttf</string>
+		<string>Raleway-SemiBoldItalic.ttf</string>
+		<string>Raleway-Thin.ttf</string>
+		<string>Raleway-ThinItalic.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -109,26 +128,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Raleway-Black.ttf</string>
-		<string>Raleway-BlackItalic.ttf</string>
-		<string>Raleway-Bold.ttf</string>
-		<string>Raleway-BoldItalic.ttf</string>
-		<string>Raleway-ExtraBold.ttf</string>
-		<string>Raleway-ExtraBoldItalic.ttf</string>
-		<string>Raleway-ExtraLight.ttf</string>
-		<string>Raleway-ExtraLightItalic.ttf</string>
-		<string>Raleway-Italic.ttf</string>
-		<string>Raleway-LightItalic.ttf</string>
-		<string>Raleway-Light.ttf</string>
-		<string>Raleway-Medium.ttf</string>
-		<string>Raleway-MediumItalic.ttf</string>
-		<string>Raleway-Regular.ttf</string>
-		<string>Raleway-SemiBold.ttf</string>
-		<string>Raleway-SemiBoldItalic.ttf</string>
-		<string>Raleway-Thin.ttf</string>
-		<string>Raleway-ThinItalic.ttf</string>
-	</array>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 </dict>
 </plist>

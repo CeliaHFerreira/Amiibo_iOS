@@ -25,6 +25,8 @@ class FavoriteAmiibosListViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Volver")
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "DarkerGreen")
         tableView.register(UINib(nibName: "AmiiboCell", bundle: nil), forCellReuseIdentifier: "AmiiboCell")
         
     }
